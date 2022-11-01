@@ -10,7 +10,10 @@ function isEven(n) {
     }
 }
 
-/*function isEven(n) {
+/*
+Antes de estudar recursividade
+
+function isEven(n) {
     while(n > 1) {
         n -= 2
         switch (n) {
