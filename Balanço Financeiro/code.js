@@ -1,15 +1,13 @@
 function code(entries) {
-    var result = 0
-    function balance(a) {
-        if(a.type == "CREDIT") {
-            return result += a.value
+    function balance(a, b) {
+        if(b.type == "CREDIT") {
+            return a + b.value
         } else {
-            return result -= a.value
+            return a - b.value
         }    
     }
     
-    entries.map(balance)
-    return result
+    return entries.reduce(balance, 0)
 }
 
 module.exports = code
